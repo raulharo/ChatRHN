@@ -10,6 +10,9 @@ public class GptMessageModel {
         this.content = content;
     }
 
+    public GptMessageModel() {
+    }
+
     public String getRole() {
         return role;
     }

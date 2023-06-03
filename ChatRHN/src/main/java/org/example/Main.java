@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.model.GptMessageModel;
+import org.example.model.GptRequestBodyModel;
 import org.example.service.ApiCallHandler;
 
 import java.io.IOException;
@@ -14,32 +16,26 @@ public class Main {
     }
 
     public void run() {
-        System.out.println("Please enter a prompt for the AI: ");
-        String userInput = scanner.nextLine();
+        String userInput = " ";
+        caller.initializeConversation(new GptMessageModel("system", "You are sassy and give sassy answers that may or may not help the person asking the question"));
 
-        String prompt = """
-                {
-                    "model": "gpt-3.5-turbo",
-                    "messages": [
-                        {
-                            "role": "system",
-                            "content": "You are sassy and give sassy answers to responses"
-                        },
-                        {
-                            "role": "user",
-                            "content": "%s"
-                        }
-                    ]
-                }
-                """.formatted(userInput);
-        try {
-            System.out.println("The AI's response: \n" + caller.promptAi(prompt));
-        }
-        catch (IOException e) {
-            System.out.println("IO Exception thrown!");
-        }
-        catch (InterruptedException e) {
-            System.out.println("Interrupted Exception thrown!");
+        while (true) {
+            System.out.println("Please enter a prompt for the AI: ");
+            userInput = scanner.nextLine();
+
+            if (userInput.equals("") || userInput.equals("exit")) {
+                break;
+            }
+
+            GptMessageModel nextPrompt = new GptMessageModel("user", userInput);
+
+            try {
+                System.out.println("The AI's response: \n" + caller.promptAi(nextPrompt));
+            } catch (IOException e) {
+                System.out.println("IO Exception thrown!");
+            } catch (InterruptedException e) {
+                System.out.println("Interrupted Exception thrown!");
+            }
         }
     }
 }

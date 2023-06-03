@@ -2,49 +2,56 @@ package org.example.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.web.client.RestTemplate;
+import org.example.model.GptMessageModel;
+import org.example.model.GptRequestBodyModel;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpHeaders;
-import java.net.http.HttpResponse;
-import java.util.ArrayList;
-import java.util.List;
-import org.example.model.GptMessageModel;
-import java.net.http.HttpRequest;
-import java.util.Scanner;
 
 public class ApiCallHandler {
     private final String OPENAI_URL = "https://api.openai.com/v1/chat/completions";
     private final String API_KEY = System.getenv("API_KEY");
+    private GptRequestBodyModel conversation = new GptRequestBodyModel();
+    private ObjectMapper mapper = new ObjectMapper();
+    private RestTemplate restTemplate = new RestTemplate();
+    private HttpHeaders headers = new HttpHeaders();
 
-    // Need to implement this method to send the current conversation to the openai API and receive the response to
-    // display on the front end.
-    public String promptAi(String message) throws IOException, InterruptedException {
-        ObjectMapper mapper = new ObjectMapper();
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(OPENAI_URL))
-                .header( "Content-Type", "application/json")
-                .header("Authorization", "Bearer " + API_KEY)
-                .POST(HttpRequest.BodyPublishers.ofString(message))
-                .build();
+    public String promptAi(GptMessageModel userPrompt) throws IOException, InterruptedException {
+        String aiMessageString = "";
+        GptMessageModel aiResponse = new GptMessageModel();
+        conversation.addMessage(userPrompt);
 
-        HttpClient client = HttpClient.newHttpClient();
-        var response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpEntity<GptRequestBodyModel> entity = new HttpEntity<>(conversation, headers);
 
-        if(response.statusCode() == 200) {
-            String body = response.body();
-            JsonNode poopoocaca = mapper.readTree(body);
-            JsonNode scoop = poopoocaca.path("choices");
+        ResponseEntity<String> jsonResponse = restTemplate.postForEntity(OPENAI_URL, entity, String.class);
 
-            for (JsonNode node : scoop) {
-                JsonNode poop = node.path("message").path("content");
-                return poop.asText();
+        if (jsonResponse.getStatusCode().is2xxSuccessful()) {
+            String rawJson = jsonResponse.getBody();
+            JsonNode topNode = mapper.readTree(rawJson);
+            JsonNode choices = topNode.path("choices");
+
+            for (JsonNode node: choices) {
+                JsonNode aiMessage = node.path("message").path("content");
+                aiMessageString = aiMessage.asText();
+            }
+
+            if(!aiMessageString.equals("")) {
+                conversation.addMessage(new GptMessageModel("assistant", aiMessageString));
+                return aiMessageString;
             }
         }
 
-        return "Cyrus is the key to the chain of apocalyptic events set to happen starting March 43rd 2043";
+        return "Bad Request, it seems.";
+    }
+
+    public void initializeConversation(GptMessageModel message) {
+        conversation.setModel("gpt-3.5-turbo");
+        conversation.addMessage(message);
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        headers.set("Authorization", "Bearer " + API_KEY);
     }
 }
