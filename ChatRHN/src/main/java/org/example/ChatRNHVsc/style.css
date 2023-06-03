@@ -1,42 +1,45 @@
 
+
 body {
-    background-color: rgb(5, 48, 16);
+    background-color: rgb(3, 53, 17);
+    margin: 0;
 }
+
 h1 {
-    color: rgb(243, 155, 221);
-    margin-top: 200px;
-    margin-left: 20px;
+    color: hsl(315, 84%, 75%);
+    margin-top: 20vh;
+    margin-left: 2vw;
     font-family: 'Roboto Light', sans-serif;
-    font-size:82px;
+    font-size: 4vw;
 }
 
 h2 {
     color: rgb(243, 155, 221);
-    margin-top: -50px;
-    margin-left: 20px;
+    margin-top: -5.5vh;
+    margin-left: 2vw;
     font-family: 'Roboto Light', sans-serif;
-    font-size: 30px;
+    font-size: 1.5vw;
 }
 
 a.button-wrapper {
     display: inline-block;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 10vw;
+    margin-top: 1.5vh;
 }
 
 button {
     border: 1px solid rgb(243, 155, 221);
     background-color: transparent;
     color: rgb(243, 155, 221);
-    margin-left: 40px;
-    padding: 5px 20px;
+    margin-left: 2vw;
+    padding: 1vh 1vw;
     font-family: 'Roboto Light', sans-serif;
-    font-size: 20px;
+    font-size: 1.0vw;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: rgb(243, 155, 221); 
+    background-color: rgb(243, 155, 221);
     color: rgb(5, 54, 31);
 }
 
@@ -46,74 +49,79 @@ button:hover {
 }
 
 .read-about {
-    margin-left: 20px;
+    margin-left: 2vw;
     font-family: 'Roboto Light', sans-serif;
-    font-size: 20px;
+    font-size: 1.1vw;
     font-weight: bold;
-    color:rgb(243, 155, 221);
+    color: rgb(243, 155, 221);
 }
 
 img {
-    width: 125Px;
+    width: 6.5vw;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 2vh;
+    left: 2vw;
 }
+
 .router-links {
     display: flex;
-    margin-left: 170px;
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-left: 8.5vw;
+    margin-top: .5vh;
+    margin-bottom: 2vh;
 }
 
 .router-links h3 {
-    margin-right: 20px;
+    margin-right: 2vw;
     font-family: 'Roboto Light', sans-serif;
-    font-size: 20px;
-    
+    font-size: 1vw;
 }
+
 .router-links h3 a {
     color: rgb(243, 155, 221);
     text-decoration: none;
 }
 
 .router-links h3 a:hover {
-    text-decoration: 1px underline;
+    text-decoration: underline;
 }
 
 .chatGPT-image {
     position: absolute;
-    margin-right: 950px;
-    margin-top: -420px;
-    right: 20px;
+    margin-right: 48vw;
+    margin-top: -40vh;
+    right: 2vw;
 }
+
 .chatGPT-image img {
-    width: 900px; 
-    height: auto; 
+    width: 45vw;
+    height: auto;
 }
+
 .fake-links {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 2vh;
+    right: 2vw;
     color: rgb(243, 155, 221);
-  }
-  
-  .fake-links a {
+}
+
+.fake-links a {
     border: 1px solid rgb(243, 155, 221);
     color: rgb(243, 155, 221);
     text-decoration: none;
-    padding: 5px 20px;
-  }
-  
-  .fake-links a:hover {
+    padding: .8vh 1vw;
+}
+
+.fake-links a:hover {
     background-color: rgb(243, 155, 221);
     color: rgb(5, 54, 31);
-  }
-  
-  .fake-links h3 {
+}
+
+.fake-links h3 {
     display: inline-block;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 1vw;
+    margin-right: 1vw;
     font-family: 'Roboto Light', sans-serif;
-    font-size: 20px;
+    font-size: 1vw;
+}.meetsUs {
+    margin-top: -20px; 
   }
