@@ -125,3 +125,10 @@ img {
 }.meetsUs {
     margin-top: -20px; 
   }
+  .nicoleInfo h3 {
+    margin-left: 25px; 
+    margin-top: 10px;
+}
+.nicoleInfo h2 {
+    margin-top: -10px;;
+}
