@@ -123,5 +123,27 @@ img {
     font-family: 'Roboto Light', sans-serif;
     font-size: 1vw;
 }.meetsUs {
-    margin-top: -20px; 
+    margin-top: -60px; 
   }
+  .nicoleInfo h3 {
+    margin-left: 25px; 
+    margin-top: -10px;
+    margin-bottom: 50px;
+    font-size: 1.5vw;
+}
+.nicoleInfo h2 {
+    margin-top: -10px;;
+    font-size: 2vw;
+}
+
+.raulsInfo h3 {
+    margin-left: 25px;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    font-size: 1.5vw; 
+}
+
+.raulsInfo h2 {
+    font-size: 2vw;
+}
+
