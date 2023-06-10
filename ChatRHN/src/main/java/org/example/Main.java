@@ -17,7 +17,7 @@ public class Main {
 
     public void run() {
         String userInput = " ";
-        caller.initializeConversation(new GptMessageModel("system", "You are sassy and give sassy answers that may or may not help the person asking the question"));
+        caller.initializeConversation();
 
         while (true) {
             System.out.println("Please enter a prompt for the AI: ");
@@ -30,7 +30,8 @@ public class Main {
             GptMessageModel nextPrompt = new GptMessageModel("user", userInput);
 
             try {
-                System.out.println("The AI's response: \n" + caller.promptAi(nextPrompt));
+                String response = caller.promptAi(nextPrompt);
+                System.out.println("The AI's response: \n" + response);
             } catch (IOException e) {
                 System.out.println("IO Exception thrown!");
             } catch (InterruptedException e) {

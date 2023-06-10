@@ -48,9 +48,9 @@ public class ApiCallHandler {
         return "Bad Request, it seems.";
     }
 
-    public void initializeConversation(GptMessageModel message) {
+    public void initializeConversation() {
         conversation.setModel("gpt-3.5-turbo");
-        conversation.addMessage(message);
+        conversation.addMessage(new GptMessageModel("system", "You are sassy and give a sarcastic spin to all your replies."));
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("Authorization", "Bearer " + API_KEY);
     }
