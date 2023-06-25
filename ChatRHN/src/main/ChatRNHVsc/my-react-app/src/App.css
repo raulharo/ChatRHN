@@ -1,38 +1,123 @@
 .App {
-  text-align: center;
+  background-color: rgb(3, 53, 17);
+  margin: 0;
+  height: 1500px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  color: hsl(315, 84%, 75%);
+  margin-top: 20vh;
+  margin-left: 2vw;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 4vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App h2 {
+  color: rgb(243, 155, 221);
+  margin-top: -5.5vh;
+  margin-left: 2vw;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.5vw;
+}
+
+.App a.button-wrapper {
+  display: inline-block;
+  margin-left: 10vw;
+  margin-top: 1.5vh;
+}
+
+.App button {
+  border: 1px solid rgb(243, 155, 221);
+  background-color: transparent;
+  color: rgb(243, 155, 221);
+  margin-left: 2vw;
+  padding: 1vh 1vw;
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1;
+}
+
+  .App button:hover {
+    background-color: rgb(243, 155, 221);
+    color: rgb(5, 54, 31);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .App .button-container {
+    display: flex;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .App .read-about {
+    margin-left: 2vw;
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: rgb(243, 155, 221);
   }
-}
+  
+  .App img {
+    width: 5.5vw;
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+  }
+  
+  .App .router-links {
+    display: flex;
+    margin-left: 8.5vw;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+  }
+  
+  .App .router-links h3 {
+    margin-right: 2vw;
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 1vw;
+  }
+  
+  .App .router-links h3 a {
+    color: rgb(243, 155, 221);
+    text-decoration: none;
+  }
+  
+  .App .router-links h3 a:hover {
+    text-decoration: underline;
+  }
+  
+  .App .chatGPT-image {
+    position: absolute;
+    margin-right: 48vw;
+    margin-top: -40vh;
+    right: 2vw;
+  }
+  
+  .App .chatGPT-image img {
+    width: 45vw;
+    height: auto;
+  }
+  
+  .App .fake-links {
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    color: rgb(243, 155, 221);
+  }
+  
+  .App .fake-links a {
+    border: 1px solid rgb(243, 155, 221);
+    color: rgb(243, 155, 221);
+    text-decoration: none;
+    padding: 0.8vh 1vw;
+  }
+  
+  .App .fake-links a:hover {
+    background-color: rgb(243, 155, 221);
+    color: rgb(5, 54, 31);
+  }
+  
+  .App .fake-links h3 {
+    display: inline-block;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: 'Roboto Light', sans-serif;
+    font-size: 1vw;
+  }
