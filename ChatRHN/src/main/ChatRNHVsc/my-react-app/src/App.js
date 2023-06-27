@@ -23,6 +23,7 @@ function App() {
       </div>
 
       <h1>Introducing ChatRHN</h1>
+      <br></br>
 
       <h2>
         We’ve trained a model called ChatRNH which interacts in an
