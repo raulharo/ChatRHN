@@ -10,7 +10,7 @@ function DevelopersPage() {
 
       <div className="nicoleInfo">
         <h2>Nicole Nguyen:</h2>
-        <h3>
+        <h3 className="right-aligned-nicole">
           Hey there! I'm Nicole Nguyen, an easy-going, friendly, and social individual. On my extra time, I enjoy playing <br />
           video games, especially League Of Legends and TFT. I was introduced to coding early on by playing with MySpace<br />
           and Facebook. While I initially pursued a career in veterinary medicine and the medical field, I eventually<br />
