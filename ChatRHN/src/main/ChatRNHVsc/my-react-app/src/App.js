@@ -4,6 +4,8 @@ import ResearchPage from './ResearchPage';
 import { Link, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import ProductPage from './ProductPage';
+import DevelopersPage from './DevelopersPage';
+import SafetyPage from './SafetyPage';
 
 function App() {
   return (
@@ -13,8 +15,8 @@ function App() {
           
           <h3> <Link to ="/research">Research v </Link> </h3>
           <h3><Link to ="/product">Product v</Link></h3>
-          <h3><a href="DevelopersPage">Developers v</a></h3>
-          <h3><a href="SafetyPage">Safety v</a></h3>
+          <h3><Link to ="/developer">Developers v</Link></h3>
+          <h3><Link to ="/safety">Safety v</Link></h3>
           <h3><a href="CompanyPage">Company v</a></h3>
         </div>
       </div>
@@ -33,6 +35,8 @@ function App() {
         <Route path="/" element={<Home />}> </Route>
         <Route path="/research" element={<ResearchPage />}> </Route>
         <Route path="/product" element={<ProductPage />}> </Route>
+        <Route path="/developer" element={<DevelopersPage />}> </Route>
+        <Route path="/safety" element={<SafetyPage />}> </Route>
 
       </Routes>
     </div>

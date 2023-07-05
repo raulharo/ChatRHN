@@ -5,7 +5,9 @@ function ProductsJustKidding() {
     <div>
       <h1>Just Kidding!!</h1>
       <h2>We are not selling anything.</h2>
-      <h3><Link to="/">Home </Link></h3>
+      <br />
+      < br />
+      <h2>Go back to <Link to="/">Home </Link></h2>
     </div>
   );
 }

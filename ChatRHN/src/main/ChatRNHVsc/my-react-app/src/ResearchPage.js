@@ -8,7 +8,7 @@ function ResearchPage() {
       <h2>
         We learned most of our coding from Tech Elevator, and whatever we struggled with we used google.
         <br />
-        <h3><Link to="/">Home </Link></h3>
+        <h3>Go back to home <Link to="/">Home </Link></h3>
       </h2>
     </div>
   );
