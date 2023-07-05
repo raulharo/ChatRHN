@@ -7,7 +7,7 @@ function CompanyPage() {
       <h1>Just Kidding!!!</h1>
       <h2>We're just 2 Jr. Developers having fun</h2>
       <a href="ChatRHN.html">Go back to ChatRHN</a>
-      <h2><Link to="/">Go back to Home </Link></h2>
+      <h2><Link to="/">Go back to ChatRHN Home </Link></h2>
     </div>
   );
 }
