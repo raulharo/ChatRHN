@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ResearchPage() {
   return (
@@ -7,7 +8,7 @@ function ResearchPage() {
       <h2>
         We learned most of our coding from Tech Elevator, and whatever we struggled with we used google.
         <br />
-        <a href="ChatRHN.html">Go back to ChatRHN</a>
+        <h3>Go back to home <Link to="/">Home </Link></h3>
       </h2>
     </div>
   );

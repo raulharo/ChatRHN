@@ -1,57 +1,45 @@
 import React from 'react';
 import './App.css';
-import ChatGPTImage from './ChatGPT.png';
-import LogoChatRNHImage from './LogoChatRNH.png';
-
+import ResearchPage from './ResearchPage';
+import { Link, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import ProductPage from './ProductPage';
+import DevelopersPage from './DevelopersPage';
+import SafetyPage from './SafetyPage';
+import CompanyPage from './CompanyPage';
 function App() {
   return (
     <div className="App">
       <div className="router-links">
         <div className="router-links">
-          <h3><a href="ResearchPage">Research v</a></h3>
-          <h3><a href="ProductPage">Product v</a></h3>
-          <h3><a href="DevelopersPage">Developers v</a></h3>
-          <h3><a href="SafetyPage">Safety v</a></h3>
-          <h3><a href="CompanyPage">Company v</a></h3>
+          
+          <h3> <Link to ="/research">Research v </Link> </h3>
+          <h3><Link to ="/product">Product v</Link></h3>
+          <h3><Link to ="/developer">Developers v</Link></h3>
+          <h3><Link to ="/safety">Safety v</Link></h3>
+          <h3><Link to ="/company">Company v</Link></h3>
         </div>
       </div>
+
+
+
 
       <div className="fake-links">
         <h3>Search</h3>
         <h3>Login </h3>
-        <h3><a href="#">Sign Up</a></h3>
+        <h3><Link to ="/"> Sign Up</Link></h3>
       </div>
 
-      <h1>Introducing ChatRHN</h1>
-      <br></br>
 
-      <h2>
-        We’ve trained a model called ChatRNH which interacts in an
-        <br />
-        awkward way. The dialogue format makes it difficult
-        <br />
-        for ChatRHN to answer questions, will not admit its mistakes,
-        <br />
-        and challenge premises, will give tons of sass, and may
-        <br />
-        or may not reject inappropriate requests.
-      </h2>
+      <Routes>
+        <Route path="/" element={<Home />}> </Route>
+        <Route path="/research" element={<ResearchPage />}> </Route>
+        <Route path="/product" element={<ProductPage />}> </Route>
+        <Route path="/developer" element={<DevelopersPage />}> </Route>
+        <Route path="/safety" element={<SafetyPage />}> </Route>
+        <Route path="/company" element={<CompanyPage />}> </Route>
 
-      <div className="button-container">
-        <a href="ChatRNHSearch.html">
-          <button>
-            <b>Try ChatRHN</b>
-          </button>
-        </a>
-        <p className="read-about">
-          <u>Read about ChatRNH NOT</u>
-        </p>
-      </div>
-      <div className="chatGPT-image">
-      <img src={ChatGPTImage} alt="ChatGPT" style={{ maxWidth: '800px', marginLeft: '75px' }} />
-      </div>
-
-      <img src={LogoChatRNHImage} alt="LogoChatRNH" />
+      </Routes>
     </div>
   );
 }

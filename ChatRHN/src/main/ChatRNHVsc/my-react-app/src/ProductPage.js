@@ -1,11 +1,13 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function ProductsJustKidding() {
   return (
     <div>
       <h1>Just Kidding!!</h1>
       <h2>We are not selling anything.</h2>
-      <a href="ChatRHN.html">Go back to ChatRHN</a>
+      <br />
+      < br />
+      <h2>Go back to <Link to="/">Home </Link></h2>
     </div>
   );
 }
