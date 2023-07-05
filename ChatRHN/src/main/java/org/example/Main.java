@@ -3,17 +3,19 @@ package org.example;
 import org.example.model.GptMessageModel;
 import org.example.model.GptRequestBodyModel;
 import org.example.service.ApiCallHandler;
-
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 import java.util.Scanner;
 
+@SpringBootApplication
 public class Main {
     private Scanner scanner = new Scanner(System.in);
     private ApiCallHandler caller = new ApiCallHandler();
     //comment
     public static void main(String[] args) {
-        Main app = new Main();
-        app.run();
+        SpringApplication.run(Main.class, args);
+        //app.run();
     }
 
     public void run() {
