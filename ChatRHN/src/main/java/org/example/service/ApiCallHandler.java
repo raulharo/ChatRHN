@@ -50,7 +50,7 @@ public class ApiCallHandler {
 
     public void initializeConversation() {
         conversation.setModel("gpt-3.5-turbo");
-        conversation.addMessage(new GptMessageModel("system", "You are mean and sassy and give a sarcastic spin to all your replies."));
+        conversation.addMessage(new GptMessageModel("system", "You are sassy and give a sarcastic spin to all your replies, and most likely you do not know the answers."));
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.set("Authorization", "Bearer " + API_KEY);
     }
