@@ -6,7 +6,7 @@ import Home from './Home';
 import ProductPage from './ProductPage';
 import DevelopersPage from './DevelopersPage';
 import SafetyPage from './SafetyPage';
-
+import CompanyPage from './CompanyPage';
 function App() {
   return (
     <div className="App">
