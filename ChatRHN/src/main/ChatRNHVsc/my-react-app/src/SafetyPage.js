@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 function SafetyPage() {
   return (
     <div>
-      <h1>If you do not like jokes :(</h1>
+      <h1>If you do not like jokes </h1>
       <h2>This is not for you. Do not</h2>
-      <a href="ChatRHN.html">Go back to ChatRHN</a>
+      <h2><Link to="/">Go back to Home </Link></h2>
     </div>
   );
 }
