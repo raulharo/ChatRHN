@@ -17,7 +17,7 @@ function App() {
           <h3><Link to ="/product">Product v</Link></h3>
           <h3><Link to ="/developer">Developers v</Link></h3>
           <h3><Link to ="/safety">Safety v</Link></h3>
-          <h3><a href="CompanyPage">Company v</a></h3>
+          <h3><Link to ="/company">Company v</Link></h3>
         </div>
       </div>
 
