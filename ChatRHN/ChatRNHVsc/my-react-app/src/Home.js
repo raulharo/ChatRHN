@@ -29,9 +29,9 @@ function Home() {
           </button>
         </a>
         <p className="read-about">
-          <Link to="/">
-            <u>Read about ChatRNH (Just Kidding)</u>
-          </Link>
+        <Link to="/">
+          <u style={{ color: 'hsl(315, 84%, 75%)' }}>Read about ChatRNH (Just Kidding)</u>
+        </Link>
         </p>
       </div>
 
