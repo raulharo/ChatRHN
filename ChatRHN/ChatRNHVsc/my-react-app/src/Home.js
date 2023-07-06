@@ -27,7 +27,7 @@ function Home () {
           </button>
         </a>
         <p className="read-about">
-          <u>Read about ChatRNH NOT</u>
+          <u>Read about ChatRNH (Just Kidding)</u>
         </p>
       </div>
       <div className="chatGPT-image">
