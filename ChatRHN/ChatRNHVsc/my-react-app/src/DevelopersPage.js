@@ -42,7 +42,7 @@ function DevelopersPage() {
       <br />
 
       <div className="devChatLink">
-        <h2><Link to="/">Go back to Home </Link></h2>
+        <h2><Link to="/">Go back to ChatRHN Homepage </Link></h2>
       </div>
     </div>
   );
