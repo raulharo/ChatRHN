@@ -9,6 +9,7 @@ function ResearchPage() {
         We learned most of our coding from Tech Elevator, and whatever we struggled with we used google.
         <br />
         <br />
+        <br />
         <h2><Link to="/">Go back to ChatRHN Home </Link></h2>
       </h2>
     </div>
