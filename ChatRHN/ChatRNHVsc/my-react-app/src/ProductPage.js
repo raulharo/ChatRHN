@@ -7,7 +7,7 @@ function ProductsJustKidding() {
       <h2>We are not selling anything.</h2>
       <br />
       < br />
-      <h2>Go back to <Link to="/">Home </Link></h2>
+      <h2><Link to="/">Go back to ChatRHN Home </Link></h2>
     </div>
   );
 }
