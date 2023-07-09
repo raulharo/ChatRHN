@@ -38,7 +38,7 @@
 
   .App button:hover {
     background-color: #FF8BFF;
-    color: rgb(5, 54, 31);
+    color: #193718;;
   }
   
   .App .button-container {
@@ -111,7 +111,7 @@
   
   .App .fake-links a:hover {
     background-color: #FF8BFF;
-    color: rgb(5, 54, 31);
+    color: #193718;;
   }
   
   .App .fake-links h3 {
