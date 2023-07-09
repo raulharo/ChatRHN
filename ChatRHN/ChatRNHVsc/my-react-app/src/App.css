@@ -31,14 +31,14 @@
   background-color: transparent;
   color: #FF8BFF;
   margin-left: 2vw;
-  padding: 1vh 1vw;
+  padding: .5vh 1.5vw;
   font-family: 'Segoe UI Light', sans-serif;
-  font-size: 1;
+  font-size: 1vw;
 }
 
   .App button:hover {
     background-color: #FF8BFF;
-    color: #193718;;
+    color: #193718;
   }
   
   .App .button-container {
@@ -71,7 +71,7 @@
   .App .router-links h3 {
     margin-right: 2vw;
     font-family: 'Segoe UI Light', sans-serif;
-    font-size: 1vw;
+    font-size: 1.1vw;
   }
   
   .App .router-links h3 a {
@@ -86,12 +86,12 @@
   .App .chatGPT-image {
     position: absolute;
     margin-right: 48vw;
-    margin-top: -40vh;
+    margin-top: -45vh;
     right: 2vw;
   }
   
   .App .chatGPT-image img {
-    width: 45vw;
+    width: 55vw;
     height: auto;
   }
   
