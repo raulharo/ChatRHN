@@ -36,7 +36,7 @@ function Home() {
       </div>
 
       <div className="chatGPT-image">
-        <img src={ChatGPTImage} alt="ChatGPT" style={{ maxWidth: '1000px', marginLeft: '15px' }} />
+        <img src={ChatGPTImage} alt="ChatGPT" style={{ maxWidth: '800px', marginLeft: '75px' }} />
       </div>
 
       <img src={LogoChatRNHImage} alt="LogoChatRNH" />

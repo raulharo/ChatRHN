@@ -5,7 +5,7 @@
 }
 
 .App h1 {
-  color: hsl(315, 84%, 75%);
+  color: #FF8BFF;
   margin-top: 20vh;
   margin-left: 2vw;
   font-family: 'Roboto Light', sans-serif;
@@ -13,7 +13,7 @@
 }
 
 .App h2 {
-  color: rgb(243, 155, 221);
+  color: #FF8BFF;
   margin-top: -5.5vh;
   margin-left: 2vw;
   font-family: 'Roboto Light', sans-serif;
@@ -27,9 +27,9 @@
 }
 
 .App button {
-  border: 1px solid rgb(243, 155, 221);
+  border: 1px solid #FF8BFF;
   background-color: transparent;
-  color: rgb(243, 155, 221);
+  color: #FF8BFF;
   margin-left: 2vw;
   padding: 1vh 1vw;
   font-family: 'Roboto Light', sans-serif;
@@ -37,7 +37,7 @@
 }
 
   .App button:hover {
-    background-color: rgb(243, 155, 221);
+    background-color: #FF8BFF;
     color: rgb(5, 54, 31);
   }
   
@@ -51,7 +51,7 @@
     font-family: 'Roboto Light', sans-serif;
     font-size: 1.1vw;
     font-weight: bold;
-    color: rgb(243, 155, 221);
+    color: #FF8BFF;
   }
   
   .App img {
@@ -75,7 +75,7 @@
   }
   
   .App .router-links h3 a {
-    color: rgb(243, 155, 221);
+    color: #FF8BFF;
     text-decoration: none;
   }
   
@@ -99,18 +99,18 @@
     position: absolute;
     top: 2vh;
     right: 2vw;
-    color: rgb(243, 155, 221);
+    color: #FF8BFF;
   }
   
   .App .fake-links a {
-    border: 1px solid rgb(243, 155, 221);
-    color: rgb(243, 155, 221);
+    border: 1px solid #FF8BFF;
+    color: #FF8BFF;
     text-decoration: none;
     padding: 0.8vh 1vw;
   }
   
   .App .fake-links a:hover {
-    background-color: rgb(243, 155, 221);
+    background-color: #FF8BFF;
     color: rgb(5, 54, 31);
   }
   
