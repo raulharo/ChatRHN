@@ -27,7 +27,7 @@ function App() {
       <div className="fake-links">
         <h3>Search</h3>
         <h3>Login </h3>
-        <h3 style={{ border: '1px solid rgb(243, 155, 221);' }}>Sign Up</h3>
+        <h3 style={{ border: '2px solid pink', padding: '7px' }}>Sign Up</h3>
       </div>
 
 
