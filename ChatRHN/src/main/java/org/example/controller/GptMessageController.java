@@ -1,9 +1,23 @@
 package org.example.controller;
 
-import org.springframework.stereotype.Controller;
+import org.example.dao.HandlerDao;
+import org.example.model.GptMessageModel;
+import org.example.model.GptRequestBodyModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class GptMessageController {
-    // Controller for when I, the incredibly handsome and extremely smart, Raul Haro, learn how to set up a
-    // tomcat server to handle http requests to the API endpoints I define here. Coming soon.
+    @Autowired
+    private HandlerDao handlerDao;
+
+    @PostMapping(value = "send-message")
+    public GptMessageModel sendMessage(@RequestBody GptRequestBodyModel message) {
+        GptMessageModel aiMessage = new GptMessageModel();
+        aiMessage.setRole("assistant");
+        aiMessage.setContent(handlerDao.promptAi(message));
+        return aiMessage;
+    }
 }
