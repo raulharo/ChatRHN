@@ -1,22 +1,22 @@
 .App {
-  background-color: rgb(3, 53, 17);
+  background-color: #193718;
   margin: 0;
   height: 1500px;
 }
 
 .App h1 {
-  color: hsl(315, 84%, 75%);
-  margin-top: 20vh;
+  color: #FF8BFF;
+  margin-top: 15vh;
   margin-left: 2vw;
-  font-family: 'Roboto Light', sans-serif;
+  font-family: 'Segoe UI Light', sans-serif;
   font-size: 4vw;
 }
 
 .App h2 {
-  color: rgb(243, 155, 221);
+  color: #FF8BFF;
   margin-top: -5.5vh;
   margin-left: 2vw;
-  font-family: 'Roboto Light', sans-serif;
+  font-family: 'Segoe UI Light', sans-serif;
   font-size: 1.5vw;
 }
 
@@ -27,18 +27,18 @@
 }
 
 .App button {
-  border: 1px solid rgb(243, 155, 221);
+  border: 1px solid #FF8BFF;
   background-color: transparent;
-  color: rgb(243, 155, 221);
+  color: #FF8BFF;
   margin-left: 2vw;
-  padding: 1vh 1vw;
-  font-family: 'Roboto Light', sans-serif;
-  font-size: 1;
+  padding: .5vh 1.5vw;
+  font-family: 'Segoe UI Light', sans-serif;
+  font-size: 1vw;
 }
 
   .App button:hover {
-    background-color: rgb(243, 155, 221);
-    color: rgb(5, 54, 31);
+    background-color: #FF8BFF;
+    color: #193718;
   }
   
   .App .button-container {
@@ -48,10 +48,10 @@
   
   .App .read-about {
     margin-left: 2vw;
-    font-family: 'Roboto Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif;
     font-size: 1.1vw;
     font-weight: bold;
-    color: rgb(243, 155, 221);
+    color: #FF8BFF;
   }
   
   .App img {
@@ -70,12 +70,12 @@
   
   .App .router-links h3 {
     margin-right: 2vw;
-    font-family: 'Roboto Light', sans-serif;
-    font-size: 1vw;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-size: 1.1vw;
   }
   
   .App .router-links h3 a {
-    color: rgb(243, 155, 221);
+    color: #FF8BFF;
     text-decoration: none;
   }
   
@@ -86,12 +86,12 @@
   .App .chatGPT-image {
     position: absolute;
     margin-right: 48vw;
-    margin-top: -40vh;
+    margin-top: -45vh;
     right: 2vw;
   }
   
   .App .chatGPT-image img {
-    width: 45vw;
+    width: 55vw;
     height: auto;
   }
   
@@ -99,26 +99,26 @@
     position: absolute;
     top: 2vh;
     right: 2vw;
-    color: rgb(243, 155, 221);
+    color: #FF8BFF;
   }
   
   .App .fake-links a {
-    border: 1px solid rgb(243, 155, 221);
-    color: rgb(243, 155, 221);
+    border: 1px solid #FF8BFF;
+    color: #FF8BFF;
     text-decoration: none;
     padding: 0.8vh 1vw;
   }
   
   .App .fake-links a:hover {
-    background-color: rgb(243, 155, 221);
-    color: rgb(5, 54, 31);
+    background-color: #FF8BFF;
+    color: #193718;
   }
   
   .App .fake-links h3 {
     display: inline-block;
     margin-left: 1vw;
     margin-right: 1vw;
-    font-family: 'Roboto Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif;
     font-size: 1vw;
   }
   .right-aligned-raul{

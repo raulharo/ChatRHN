@@ -23,20 +23,19 @@ function Home() {
       </h2>
 
       <div className="button-container">
-        <a href="ChatRNHSearch.html">
+        
           <button>
             <b>Try ChatRHN</b>
           </button>
-        </a>
         <p className="read-about">
         <Link to="/">
-          <u style={{ color: 'hsl(315, 84%, 75%)' }}>Read about ChatRNH (Just Kidding)</u>
+          <u style={{ color: '#FF8BFF' }}>Read about ChatRNH (Just Kidding)</u>
         </Link>
         </p>
       </div>
 
       <div className="chatGPT-image">
-        <img src={ChatGPTImage} alt="ChatGPT" style={{ maxWidth: '800px', marginLeft: '75px' }} />
+        <img src={ChatGPTImage} alt="ChatGPT" style={{ maxWidth: '900px', marginLeft: '-25px' }} />
       </div>
 
       <img src={LogoChatRNHImage} alt="LogoChatRNH" />
