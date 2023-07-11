@@ -6,8 +6,11 @@ import MessageBar from './MessageBar';
 function ChatPage() {
   return (
     <div>
-      <SearchBar />
+      
       <MessageBar />
+      <br />
+
+      <SearchBar />
     </div>
   );
 }
