@@ -38,7 +38,8 @@
 
   .App button:hover {
     background-color: #FF8BFF;
-    color: #193718;
+    color: transparent;
+
   }
   
   .App .button-container {

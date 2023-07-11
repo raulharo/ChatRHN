@@ -26,7 +26,7 @@ function Home() {
       <div className="button-container">
         
           <button>
-            <b><Link to ="/chat"> Try ChatRHN</Link></b>
+            <b ><Link to ="/Chat"> Try ChatRHN</Link></b>
           </button>
         <p className="read-about">
         <Link to="/">
@@ -35,7 +35,7 @@ function Home() {
         </p>
         <Routes>
 
-        <Route path="/chat" element={<ChatPage />}> </Route>
+        <Route path="/" element={<ChatPage />}> </Route>
 
       </Routes>
 
