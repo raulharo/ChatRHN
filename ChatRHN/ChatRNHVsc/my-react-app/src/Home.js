@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
 import ChatPage from './ChatPage';
+import { Link, Routes, Route } from 'react-router-dom';
 
 import ChatGPTImage from './ChatGPT.png';
 import LogoChatRNHImage from './LogoChatRNH.png';
@@ -24,16 +24,21 @@ function Home() {
       </h2>
 
       <div className="button-container">
-        <button>
-          <b>
-            <Link to="/chat">Try ChatRHN</Link>
-          </b>
-        </button>
+        
+          <button>
+            <b><Link to ="/Chat"> Try ChatRHN</Link></b>
+          </button>
         <p className="read-about">
-          <Link to="/">
-            <u style={{ color: '#FF8BFF' }}>Read about ChatRNH (Just Kidding)</u>
-          </Link>
+        <Link to="/">
+          <u style={{ color: '#FF8BFF' }}>Read about ChatRNH (Just Kidding)</u>
+        </Link>
         </p>
+        <Routes>
+
+        <Route path="/" element={<ChatPage />}> </Route>
+
+      </Routes>
+
       </div>
 
       <div className="chatGPT-image">
@@ -41,12 +46,9 @@ function Home() {
       </div>
 
       <img src={LogoChatRNHImage} alt="LogoChatRNH" />
-
-      <Routes>
-        <Route path="/chat" element={<ChatPage />} />
-      </Routes>
     </>
   );
 }
 
 export default Home;
+
