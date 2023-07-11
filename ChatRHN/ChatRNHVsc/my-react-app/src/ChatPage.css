@@ -1,16 +1,14 @@
 .chat-page-container {
-    background-color: #f2f2f2;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #333333; /* Dark grey */
+    height: 100vh; /* Adjust as needed */
   }
   
-  .chat-page-content {
-    max-width: 500px;
-    width: 90%;
-    background-color: #fff;
+  .message-bar-container {
+    background-color: #666666; /* Lighter grey */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-bar-container {
+    background-color: #666666; /* Lighter grey */
+    padding: 20px;
   }
