@@ -25,7 +25,7 @@ function Home() {
       <div className="button-container">
         <button>
         <b>
-            <Link to="/Chat" style={{ color: '#FF69B4' }}>Try ChatRHN</Link>
+            <Link to="/chat" style={{ color: '#FF8BFF' }}>Try ChatRHN</Link>
           </b>
         </button>
         <p className="read-about">
