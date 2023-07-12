@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import ChatPage from './ChatPage';
+
 import ChatGPTImage from './ChatGPT.png';
 import LogoChatRNHImage from './LogoChatRNH.png';
 
@@ -24,7 +24,9 @@ function Home() {
 
       <div className="button-container">
         <button>
-          <b><Link to="/Chat">Try ChatRHN</Link></b>
+        <b>
+            <Link to="/chat" style={{ color: '#FF8BFF' }}>Try ChatRHN</Link>
+          </b>
         </button>
         <p className="read-about">
           <Link to="/">
