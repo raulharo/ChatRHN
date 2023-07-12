@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import ChatPage from './ChatPage';
+
 import ChatGPTImage from './ChatGPT.png';
 import LogoChatRNHImage from './LogoChatRNH.png';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import './ChatPage.css';
 import SearchBar from './SearchBar';
 import MessageBar from './MessageBar';
+import './ChatPage.css';
 
 function ChatPage() {
   return (
