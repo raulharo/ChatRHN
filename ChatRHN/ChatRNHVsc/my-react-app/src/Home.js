@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import ChatPage from './ChatPage';
-import { Link, Routes, Route } from 'react-router-dom';
-=======
 import { Link, Outlet } from 'react-router-dom';
->>>>>>> main
 
 import ChatGPTImage from './ChatGPT.png';
 import LogoChatRNHImage from './LogoChatRNH.png';
@@ -28,29 +23,15 @@ function Home() {
       </h2>
 
       <div className="button-container">
-<<<<<<< HEAD
-        
-          <button>
-            <b ><Link to ="/Chat"> Try ChatRHN</Link></b>
-          </button>
-=======
         <button>
-        <b>
-            <Link to="/chat" style={{ color: '#FF8BFF' }}>Try ChatRHN</Link>
-          </b>
+          <b><Link to="/Chat">Try ChatRHN</Link></b>
         </button>
->>>>>>> main
         <p className="read-about">
-        <Link to="/">
-          <u style={{ color: '#FF8BFF' }}>Read about ChatRNH (Just Kidding)</u>
-        </Link>
+          <Link to="/">
+            <u style={{ color: '#FF8BFF' }}>Read about ChatRNH (Just Kidding)</u>
+          </Link>
         </p>
-        <Routes>
-
-        <Route path="/" element={<ChatPage />}> </Route>
-
-      </Routes>
-
+        <Outlet /> {}
       </div>
 
       <div className="chatGPT-image">
