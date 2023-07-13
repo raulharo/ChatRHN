@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const MessageBar = () => {
-  const [message, setMessage] = useState('');
+const MessageBar = ({setMessage}) => {
 
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -9,7 +8,6 @@ const MessageBar = () => {
 
   return (
     <textarea
-      value={message}
       onChange={handleChange}
       placeholder="Type your message..."
     />
