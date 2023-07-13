@@ -7,11 +7,12 @@ function ResearchPage() {
       <h1>Just Kidding!!!</h1>
       <h2>
         We learned most of our coding from Tech Elevator, and whatever we struggled with we used google.
+        </h2>
         <br />
         <br />
         <br />
-        <h2><Link to="/">Go back to ChatRHN Home </Link></h2>
-      </h2>
+        <h2 ><Link to="/" style={{ color: '#FF8BFF' }}>Go back to ChatRHN Home </Link></h2>
+      
     </div>
   );
 }
