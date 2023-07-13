@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
 import MessageBar from './MessageBar';
 import './ChatPage.css';
@@ -22,33 +22,45 @@ const ChatPage = () => {
     setUserInput(input);
   }
 
+  // Function to add the AIs response to the messages array
+  const addAiResponse = (response) => {
+    setConversation(conversation => ({
+      ...conversation,
+      messages: [...conversation.messages, response]
+    }));
+  }
+
+  const addUserInput = (input) => {
+    setConversation(conversation => ({
+      ...conversation,
+      messages: [...conversation.messages, input]
+    }));
+  }
+
+  const showArray = () => {
+    console.log(conversation.messages);
+  }
+
+  useEffect(() => {
+    console.log(conversation.messages);
+  }, [conversation.messages]);
+  
+
   // This function will add what the user has input in the text box to the conversation as a new object in the messages
   // array of the conversation. It will then send a post request to our Java back end with the conversation and add the
   // AIs response to the conversation for it to be displayed on the screen... when I figure out how to display the convo
   // on the screen
   const promptAi = async () => {
-    let newMessage = {role: "user", content: userInput};
-    setConversation(prevState => ({
-      ...prevState,
-      messages: [...prevState.messages, newMessage]
-    }));
+    let response = {};
+    addUserInput({role: "user", content: userInput});
 
     try {
-      const response = await axios.post('http://localhost:8080/send-message', conversation);
-      addAiResponse(response);
-      console.log(conversation.messages);
+      response = await axios.post('http://localhost:8080/send-message', conversation);
+      addAiResponse(response.data);
     }
     catch (error) {
       console.log(error);
     }
-  }
-
-  // Function to add the AIs response to the messages array
-  const addAiResponse = (response) => {
-    setConversation(prevState => ({
-      ...prevState,
-      messages: [...prevState.messages, response]
-    }));
   }
 
   return (
@@ -56,6 +68,7 @@ const ChatPage = () => {
       <div className="message-bar-container">
         <MessageBar setMessage={handleUserInput}/>
         <button onClick={promptAi}>Submit</button>
+        <button onClick={showArray}>Messages Array</button>
       </div>
       <br />
       <div className="search-bar-container">
