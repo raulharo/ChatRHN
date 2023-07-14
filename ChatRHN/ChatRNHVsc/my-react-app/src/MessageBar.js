@@ -9,7 +9,7 @@ const MessageBar = ({setMessage}) => {
   return (
     <textarea
       onChange={handleChange}
-      placeholder="Type your message..."
+      placeholder="Type your question"
     />
   );
 };
