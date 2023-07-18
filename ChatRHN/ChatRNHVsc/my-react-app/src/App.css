@@ -46,6 +46,14 @@
     display: flex;
     align-items: center;
   }
+
+  .App .chat-link {
+    color: #FF8BFF;
+  }
+  
+  .App .chat-link:hover {
+    color: #193718;
+  }
   
   .App .read-about {
     margin-left: 2vw;
