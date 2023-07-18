@@ -139,4 +139,11 @@
     
   }
   
-  
+  .fake-chat-link {
+  color: #FF8BFF;
+  transition: margin-left 0.3s;
+}
+
+.fake-chat-link:hover {
+  margin-left: -5px;
+}
