@@ -31,14 +31,14 @@
   background-color: transparent;
   color: #FF8BFF;
   margin-left: 2vw;
-  padding: .5vh 1.5vw;
+  padding: .4vh 1vw;
   font-family: 'Segoe UI Light', sans-serif;
   font-size: 1vw;
 }
 
   .App button:hover {
     background-color: #FF8BFF;
-    color: transparent;
+    color: #193718;
 
   }
   
