@@ -8,7 +8,7 @@ function SafetyPage() {
       <h1>If you do not like jokes </h1>
       <h2>This is not for you. Do not</h2><br />
       <br />
-      <h2 ><Link to="/" style={{ color: '#FF8BFF' }}>Go back to ChatRHN Home </Link></h2>
+      <h2 ><Link to="/" className="fake-chat-link">Go back to ChatRHN Home</Link></h2>
     </div>
   );
 }
