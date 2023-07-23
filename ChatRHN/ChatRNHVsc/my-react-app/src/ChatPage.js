@@ -62,6 +62,11 @@ class ChatPage extends React.Component {
 
     return (
     <div className="chat-page-container">
+      <div className="search-bar-container">
+        <SearchBar />
+      </div>
+      <br />
+      
       <div className="message-bar-container">
         <MessageBar setMessage={this.handleUserInput} />
         <button onClick={this.submitPrompt}>Submit</button>

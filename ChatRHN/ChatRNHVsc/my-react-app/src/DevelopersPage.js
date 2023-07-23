@@ -42,7 +42,7 @@ function DevelopersPage() {
       <br />
 
       <div className="devChatLink">
-      <h2 ><Link to="/" style={{ color: '#FF8BFF' }}>Go back to ChatRHN Home </Link></h2>
+      <h2 ><Link to="/" className="fake-chat-link">Go back to ChatRHN Home</Link></h2>
       </div>
     </div>
   );

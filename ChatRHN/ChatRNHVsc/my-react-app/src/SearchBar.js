@@ -12,7 +12,7 @@ const SearchBar = () => {
       type="text"
       value={searchQuery}
       onChange={handleChange}
-      placeholder="Search..."
+      placeholder="Your Answer..."
     />
   );
 };

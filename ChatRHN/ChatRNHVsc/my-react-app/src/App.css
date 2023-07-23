@@ -31,20 +31,28 @@
   background-color: transparent;
   color: #FF8BFF;
   margin-left: 2vw;
-  padding: .5vh 1.5vw;
+  padding: .4vh 1vw;
   font-family: 'Segoe UI Light', sans-serif;
   font-size: 1vw;
 }
 
   .App button:hover {
     background-color: #FF8BFF;
-    color: transparent;
+    color: #193718;
 
   }
   
   .App .button-container {
     display: flex;
     align-items: center;
+  }
+
+  .App .chat-link {
+    color: #FF8BFF;
+  }
+  
+  .App .chat-link:hover {
+    color: #193718;
   }
   
   .App .read-about {
@@ -131,4 +139,11 @@
     
   }
   
-  
+  .fake-chat-link {
+  color: #FF8BFF;
+  transition: margin-left 0.3s;
+}
+
+.fake-chat-link:hover {
+  margin-left: -5px;
+}
