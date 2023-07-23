@@ -3,16 +3,10 @@ import SearchBar from './SearchBar';
 import MessageBar from './MessageBar';
 import './ChatPage.css';
 import axios from 'axios';
-
-// This ChatPage is currently under construction. The big "bug" at the moment is that useState hooks are
-// asynchronous; so when we add the user's question for the AI to the messages array in the state, the state
-// is not updated immediately and so the promptAi() function won't have the updated messages array to send in
-// the API call to gpt-3.5-turbo. We need to figure out a way to make sure that the state is updated BEFORE the promptAi()
-// function is called or find a synchronous way to modify data.
+import TextBox from './TextBox';
 
 class ChatPage extends React.Component {
-  // This data property using the useState hook is holding the response body that will be sent to our api with every post request
-  constructor(props) {
+    constructor(props) {
     super(props);
     this.state = {
       conversation: {
@@ -64,6 +58,7 @@ class ChatPage extends React.Component {
   }
 
   render() {
+    const {conversation} = this.state.conversation.messages.shift;
 
     return (
     <div className="chat-page-container">
@@ -73,6 +68,11 @@ class ChatPage extends React.Component {
         <button onClick={this.printConversation}>Messages</button>
       </div>
       <br />
+      <div className="text-box-container">
+        {conversation.map(item => (
+          <TextBox key={item.content} content={item.content}></TextBox>
+        ))};
+      </div>
       <div className="search-bar-container">
         <SearchBar />
       </div>
