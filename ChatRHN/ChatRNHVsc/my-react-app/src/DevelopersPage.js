@@ -13,7 +13,7 @@ function DevelopersPage() {
         <h3 className="right-aligned-nicole">
           Hey there! I'm Nicole Nguyen, an easy-going, friendly, and social individual. On my extra time, I enjoy playing <br />
           video games, especially Diablo 4, League Of Legends and TFT. I was introduced to coding early on by playing with <br />
-          MySpace and Facebook. While I initially pursued a career in veterinary medicine and the medical field, I eventually<br />
+          MySpace and Xanga. While I initially pursued a career in veterinary medicine and the medical field, I eventually<br />
           realized it wasn't the right fit for me. Determined to follow my passion, I enrolled in Tech Elevator's<br />
           14-week boot camp for software engineering.<br />
           <br />
