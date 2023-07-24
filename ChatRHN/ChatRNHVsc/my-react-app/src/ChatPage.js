@@ -42,26 +42,6 @@ class ChatPage extends React.Component {
     }
   }
 
-  addUserInput() {
-    const tempArray = this.state.conversation.messages.slice(); // Careful! Only a pointer
-    tempArray.push({});
-    // this.state.conversation.messages = tempArray; // Works for JS, but not React
-    const stateUpdate = {
-      ...this.state.conversation
-    }
-    this.setState(stateUpdate);
-    this.setState({conversation: {
-      ...this.state.conversation
-      , messages: [
-        ...this.state.conversation.messages
-        , {}
-      ]
-    }}, () => {
-      // Do something here with the new state
-      // Callback hell
-    })
-  }
-
   submitPrompt = async () => {
     const newConversation = this.addMessageToConversation({
       role: "user"
@@ -76,6 +56,7 @@ class ChatPage extends React.Component {
           conversation: updatedConversation
         });
     } catch (error) {
+      // TODO: Add error display here
       console.error(error);
     }
   }
