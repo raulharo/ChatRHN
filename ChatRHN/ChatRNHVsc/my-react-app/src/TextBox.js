@@ -1,10 +1,8 @@
 import React from 'react'
 
-const TextBox = (content) => {
+const TextBox = ({content}) => {
   return (
-    <div>
-      <h2>{content}</h2>
-    </div>
+    <h2>{content}</h2>
   )
 }
 

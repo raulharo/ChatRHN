@@ -27,60 +27,56 @@ class ChatPage extends React.Component {
     this.state.prompt.userInput = value;
   }
 
-  addUserInput = () => {
-    let tempArray = this.state.conversation.messages;
-    let newMessage = {role: "user", content: this.state.prompt.userInput};
-
-    tempArray.push(newMessage);
-
-    this.state.conversation.messages = tempArray;
-  }
 
   printConversation = () => {
     console.log(this.state.conversation.messages);
   }
 
-  submitPrompt = () => {
-    this.addUserInput();
+  addMessageToConversation = (message, conversation) => {
+    return {
+      ...conversation
+      , messages: [
+        ...conversation.messages
+        , message
+      ]
+    }
+  }
+
+  submitPrompt = async () => {
+    const newConversation = this.addMessageToConversation({
+      role: "user"
+      , content: this.state.prompt.userInput
+    }, this.state.conversation);
+    this.setState({conversation: newConversation});
 
     try {
-      axios.post('http://localhost:8080/send-message', this.state.conversation).then(response => {
-        let tempArray = this.state.conversation.messages;
-
-        tempArray.push(response.data);
-
-        this.state.conversation.messages = tempArray;
-      });
-    }
-    catch (error) {
-      console.log(error);
+        const response = await axios.post('http://localhost:8080/send-message', this.state.conversation)
+        const updatedConversation = this.addMessageToConversation(response.data, newConversation);
+        this.setState({
+          conversation: updatedConversation
+        });
+    } catch (error) {
+      console.error(error);
     }
   }
 
   render() {
-    const {conversation} = this.state.conversation.messages.shift;
 
     return (
     <div className="chat-page-container">
-      <div className="search-bar-container">
-        <SearchBar />
+
+      <div className="text-box-container">
+        {this.state.conversation.messages.map((item, index) => (
+          <TextBox key={`${index}-${item.content}`} content={`${item.role}: ${item.content}`} />
+        ))}
       </div>
-      <br />
-      
+
       <div className="message-bar-container">
         <MessageBar setMessage={this.handleUserInput} />
         <button onClick={this.submitPrompt}>Submit</button>
         <button onClick={this.printConversation}>Messages</button>
       </div>
-      <br />
-      <div className="text-box-container">
-        {conversation.map(item => (
-          <TextBox key={item.content} content={item.content}></TextBox>
-        ))};
-      </div>
-      <div className="search-bar-container">
-        <SearchBar />
-      </div>
+
     </div>
     );
   }
