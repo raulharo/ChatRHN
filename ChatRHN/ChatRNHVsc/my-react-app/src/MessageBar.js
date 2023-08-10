@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MessageBar = ({setMessage}) => {
+const MessageBar = ({setMessage, userInput}) => {
 
   const handleChange = (e) => {
     setMessage(e.target.value);
@@ -8,6 +8,7 @@ const MessageBar = ({setMessage}) => {
 
   return (
     <textarea
+      value={userInput}
       onChange={handleChange}
       placeholder="Type your question"
     />

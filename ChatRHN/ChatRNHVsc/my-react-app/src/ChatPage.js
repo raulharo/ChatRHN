@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBar from './SearchBar';
 import MessageBar from './MessageBar';
 import './ChatPage.css';
 import axios from 'axios';
@@ -24,12 +23,11 @@ class ChatPage extends React.Component {
   }
 
   handleUserInput = (value) => {
-    this.state.prompt.userInput = value;
-  }
-
-
-  printConversation = () => {
-    console.log(this.state.conversation.messages);
+    this.setState({
+      prompt: {
+        userInput: value
+      }
+    });
   }
 
   addMessageToConversation = (message, conversation) => {
@@ -48,6 +46,11 @@ class ChatPage extends React.Component {
       , content: this.state.prompt.userInput
     }, this.state.conversation);
     this.setState({conversation: newConversation});
+    this.setState({
+      prompt: {
+        userInput: ""
+      }
+    });
 
     try {
         const response = await axios.post('http://localhost:8080/send-message', newConversation);
@@ -66,20 +69,20 @@ class ChatPage extends React.Component {
     <div className="chat-page-container">
 
       <div className="text-box-container">
-        {this.state.conversation.messages.map((item, index) => (
+        {this.state.conversation.messages.slice(1).map((item, index) => (
           <TextBox key={`${index}-${item.content}`} content={`${item.role}: ${item.content}`} />
         ))}
       </div>
 
       <div className="message-bar-container">
-        <MessageBar setMessage={this.handleUserInput} />
+        <MessageBar setMessage={this.handleUserInput} userInput={this.state.prompt.userInput} />
         <button onClick={this.submitPrompt}>Submit</button>
-        <button onClick={this.printConversation}>Messages</button>
       </div>
 
     </div>
     );
   }
 }
+
 
 export default ChatPage;
