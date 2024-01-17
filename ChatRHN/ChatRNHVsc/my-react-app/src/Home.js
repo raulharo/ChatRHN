@@ -8,7 +8,8 @@ function Home() {
     <>
       <h1>Introducing ChatRHN</h1>
       <br />
-
+      
+      <div className="info">
       <h2>
         We've trained a model called ChatRNH which interacts in an
         <br />
@@ -20,6 +21,7 @@ function Home() {
         <br />
         or may not reject inappropriate requests.
       </h2>
+      </div>
 
       <div className="button-container">
         <button>
