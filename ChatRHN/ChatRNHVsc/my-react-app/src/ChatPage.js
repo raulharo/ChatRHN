@@ -53,7 +53,7 @@ class ChatPage extends React.Component {
     });
 
     try {
-      const response = await axios.post("https://chatrhn.uspwin.com/send-message", newConversation);
+        const response = await axios.post('http://localhost:8080/send-message', newConversation);
         const updatedConversation = this.addMessageToConversation(response.data, newConversation);
         this.setState({
           conversation: updatedConversation

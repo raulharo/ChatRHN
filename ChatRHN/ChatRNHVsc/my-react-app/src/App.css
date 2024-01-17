@@ -150,6 +150,7 @@
 .fake-chat-link:hover {
   margin-left: -5px;
 }
+
 @media (max-width: 768px) {
   .App h1 {
     margin-top: 4vh;
