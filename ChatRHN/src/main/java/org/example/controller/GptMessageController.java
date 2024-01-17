@@ -18,7 +18,7 @@ public class GptMessageController {
     @PostMapping(value = "send-message")
     public GptMessageModel sendMessage(@RequestBody GptRequestBodyModel message) {
         GptMessageModel aiMessage = new GptMessageModel();
-        aiMessage.setRole("assistant");
+        aiMessage.setRole("ChatRHN");
         aiMessage.setContent(handlerDao.promptAi(message));
         return aiMessage;
     }
