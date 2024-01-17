@@ -16,6 +16,10 @@
 
 .App .info h2{
   color: #FF8BFF;
+  margin-left: 2vw;
+  font-family: 'Segoe UI Light', sans-serif;
+  font-size: 1.5vw;
+  margin-top: -1vh;
 }
 
 .App h2 {
