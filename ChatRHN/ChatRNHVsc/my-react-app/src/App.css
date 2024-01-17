@@ -1,7 +1,9 @@
 .App {
   background-color: #193718;
   margin: 0;
+  padding: 0;
   height: 1500px;
+
 }
 
 .App h1 {
@@ -17,6 +19,7 @@
   margin-left: 2vw;
   font-family: 'Segoe UI Light', sans-serif;
   font-size: 1.5vw;
+  margin-top: -1vh;
 }
 
 .App a.button-wrapper {
@@ -40,7 +43,7 @@
     color: #193718;
 
   }
-  
+
   .App .button-container {
     display: flex;
     align-items: center;
@@ -49,11 +52,11 @@
   .App .chat-link {
     color: #FF8BFF;
   }
-  
+
   .App .chat-link:hover {
     color: #193718;
   }
-  
+
   .App .read-about {
     margin-left: 2vw;
     font-family: 'Segoe UI Light', sans-serif;
@@ -61,67 +64,68 @@
     font-weight: bold;
     color: #FF8BFF;
   }
-  
+
   .App img {
     width: 5.5vw;
     position: absolute;
     top: 2vh;
     left: 2vw;
   }
-  
+
   .App .router-links {
     display: flex;
     margin-left: 8.5vw;
     margin-top: 0.5vh;
     margin-bottom: 2vh;
   }
-  
+
   .App .router-links h3 {
     margin-right: 2vw;
     font-family: 'Segoe UI Light', sans-serif;
     font-size: 1.1vw;
   }
-  
+
   .App .router-links h3 a {
     color: #FF8BFF;
     text-decoration: none;
   }
-  
+
   .App .router-links h3 a:hover {
     text-decoration: underline;
   }
-  
+
   .App .chatGPT-image {
     position: absolute;
     margin-right: 48vw;
-    margin-top: -45vh;
+    margin-top: -23%;
     right: 2vw;
+    max-width: 100%;
   }
-  
+
   .App .chatGPT-image img {
     width: 55vw;
     height: auto;
   }
-  
+
   .App .fake-links {
     position: absolute;
     top: 2vh;
     right: 2vw;
     color: #FF8BFF;
   }
-  
+
   .App .fake-links a {
     border: 1px solid #FF8BFF;
     color: #FF8BFF;
     text-decoration: none;
     padding: 0.8vh 1vw;
   }
-  
+
   .App .fake-links a:hover {
     background-color: #FF8BFF;
     color: #193718;
   }
-  
+
   .App .fake-links h3 {
     display: inline-block;
     margin-left: 1vw;
@@ -130,14 +134,14 @@
     font-size: 1vw;
   }
   .right-aligned-raul{
-    margin-left: 30px; 
+    margin-left: 30px;
   }
 
   .right-aligned-nicole{
-    margin-left: 30px; 
-    
+    margin-left: 30px;
+
   }
-  
+
   .fake-chat-link {
   color: #FF8BFF;
   transition: margin-left 0.3s;
@@ -145,4 +149,17 @@
 
 .fake-chat-link:hover {
   margin-left: -5px;
+}
+@media (max-width: 768px) {
+  .App h1 {
+    margin-top: 4vh;
+    font-size: 4vw;
+  }
+  .App .chatGPT-image {
+      position: absolute;
+      margin-right: 48vw;
+      margin-top: -30%;
+      right: 2vw;
+      max-width: 100%;
+    }
 }

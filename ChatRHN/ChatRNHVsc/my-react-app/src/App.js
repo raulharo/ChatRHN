@@ -7,11 +7,28 @@ import ProductPage from './ProductPage';
 import DevelopersPage from './DevelopersPage';
 import SafetyPage from './SafetyPage';
 import CompanyPage from './CompanyPage';
-import ChatPage from './ChatPage'; 
+import ChatPage from './ChatPage';
 
+function MyComponent() {
+  const isMobile = window.innerWidth <= 768;
+
+  return (
+    <div>
+      {isMobile ? (
+
+        <div className="mobile-content">
+        </div>
+      ) : (
+        <div className="desktop-content">
+        </div>
+      )}
+    </div>
+  );
+}
 function App() {
   return (
     <div className="App">
+
       <div className="router-links">
         <div className="router-links">
           <h3><Link to="/research">Research v</Link></h3>

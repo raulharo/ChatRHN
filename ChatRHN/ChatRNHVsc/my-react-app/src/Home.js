@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-
 import ChatGPTImage from './ChatGPT.png';
 import LogoChatRNHImage from './LogoChatRNH.png';
 
@@ -37,7 +36,7 @@ function Home() {
       </div>
 
       <div className="chatGPT-image">
-        <img src={ChatGPTImage} alt="ChatGPT" style={{ maxWidth: '900px', marginLeft: '-25px' }} />
+        <img src={ChatGPTImage} alt="ChatGPT" />
       </div>
 
       <img src={LogoChatRNHImage} alt="LogoChatRNH" />
