@@ -1,4 +1,5 @@
 import React from 'react';
+import './MessageBar.css';
 
 const MessageBar = ({setMessage, userInput}) => {
 
@@ -11,6 +12,7 @@ const MessageBar = ({setMessage, userInput}) => {
       value={userInput}
       onChange={handleChange}
       placeholder="Type your question"
+      className="message-bar-textarea"
     />
   );
 };
