@@ -6,6 +6,7 @@ body,
 html {
   margin: 0 !important;
   padding: 0 !important;
+  overflow: hidden;
 }
 
 .App {
@@ -107,14 +108,14 @@ html {
   .App .chatGPT-image {
     position: absolute;
     margin-right: 48vw;
-    margin-top: -25%;
+    margin-top: -23%;
     right: 2vw;
     max-width: 100%;
   }
 
   .App .chatGPT-image img {
     width: 55vw;
-    height: 85vh;
+    height: auto;
   }
 
   .App .fake-links {

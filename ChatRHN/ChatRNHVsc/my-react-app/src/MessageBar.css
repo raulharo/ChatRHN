@@ -1,8 +1,9 @@
 .message-bar-textarea {
     width: 90%; 
-    height: 5vh; 
+    height: 10vh; 
     padding: 1vh;
     border: 1px solid; 
+    font-size: 1.2vh;
   }
   .message-bar-container {
     position: fixed;
