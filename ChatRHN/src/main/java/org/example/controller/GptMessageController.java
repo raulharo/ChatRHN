@@ -17,6 +17,14 @@ public class GptMessageController {
 
     @PostMapping(value = "send-message")
     public GptMessageModel sendMessage(@RequestBody GptRequestBodyModel message) {
+        for ( GptMessageModel msg : message.getMessages()){
+            if(msg.getRole().equals("You")){
+                msg.setRole("user");
+            }
+            else if(msg.getRole().equals("ChatRHN")){
+                msg.setRole("assistant");
+            }
+        }
         GptMessageModel aiMessage = new GptMessageModel();
         aiMessage.setRole("ChatRHN");
         aiMessage.setContent(handlerDao.promptAi(message));

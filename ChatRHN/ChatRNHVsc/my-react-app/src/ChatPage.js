@@ -42,7 +42,7 @@ class ChatPage extends React.Component {
 
   submitPrompt = async () => {
     const newConversation = this.addMessageToConversation({
-      role: "user"
+      role: "You"
       , content: this.state.prompt.userInput
     }, this.state.conversation);
     this.setState({conversation: newConversation});
