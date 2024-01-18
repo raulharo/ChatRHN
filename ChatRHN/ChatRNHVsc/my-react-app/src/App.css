@@ -1,8 +1,18 @@
+{
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   background-color: #193718;
   margin: 0;
   padding: 0;
-  height: 1500px;
+  height: 150vh;
 
 }
 
@@ -14,16 +24,8 @@
   font-size: 4vw;
 }
 
-.App .info h2{
-  color: #FF8BFF;
-  margin-left: 2vw;
-  font-family: 'Segoe UI Light', sans-serif;
-  font-size: 1.5vw;
-  margin-top: -1vh;
-}
-
 .App h2 {
-  color: white;
+  color: #FF8BFF;
   margin-left: 2vw;
   font-family: 'Segoe UI Light', sans-serif;
   font-size: 1.5vw;
@@ -105,7 +107,7 @@
   .App .chatGPT-image {
     position: absolute;
     margin-right: 48vw;
-    margin-top: -25%;
+    margin-top: -23%;
     right: 2vw;
     max-width: 100%;
   }

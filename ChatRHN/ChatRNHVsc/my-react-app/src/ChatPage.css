@@ -1,15 +1,14 @@
 .chat-page-container {
-    background-color: #193718; 
-    height: 100vh; 
-  }
-  
-  .message-bar-container {
-    
-    background-color: #666666; 
-    padding: px;
-  }
-  
-  .search-bar-container {
-    background-color: #666666; 
-    padding: 20px;
-  }
+  background-color: #193718; 
+  height: 100vh; 
+}
+
+.message-bar-container {
+  background-color: #666666; 
+  padding: 20px;
+}
+
+.search-bar-container {
+  background-color: #666666; 
+  padding: 20px;
+}

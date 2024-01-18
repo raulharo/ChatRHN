@@ -11,15 +11,15 @@ function Home() {
       
       <div className="info">
       <h2>
-        We've trained a model called ChatRNH which interacts in an
+        We've trained a model called ChatRNH which interacts in
         <br />
-        awkward way. The dialogue format makes it difficult
+        an anwkward way. The dialogue format makes it difficult for 
         <br />
-        for ChatRHN to answer questions, admit its mistakes,
+        ChatRHN to answer questions, admit its mistakes, challenge 
         <br />
-        challenge premises, and give tons of sass. It may
+        premises, and give tons of sass. It may or may not reject
         <br />
-        or may not reject inappropriate requests.
+         inappropriate requests.
       </h2>
       </div>
 
